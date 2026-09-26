@@ -1,23 +1,71 @@
 aid: atmo-ai
+
 name: Atmo AI
-description: 'Atmo AI is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://cdn.prod.website-files.com/663b054598a372edb070cf86/6645260eb57b16d6d6c4adac_Atmo%20Frame.webp
+
+description: 'Atmo AI provides ultra‑precise AI‑driven weather forecasting for micro‑climates, leveraging real‑time satellite, radar, buoy and ground‑station data. Its deep‑learning models deliver forecasts up to 40,000× faster than traditional methods, achieving up to 50% higher accuracy across nowcasting to 14‑day horizons. Trusted by governments, militaries and industries worldwide, Atmo AI serves sectors such as aerospace, defense, agriculture and disaster response.'
+
 url: https://raw.githubusercontent.com/api-evangelist/atmo-ai/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Weather
+- AI
+- Forecasting
+- Climate
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/atmo-ai-hosts.yml
+- type: Vendors
+  url: vendors/atmo-ai-vendors.yml
+- type: Login
+  url: https://www.atmo.ai/log-in
+- type: DomainSecurity
+  url: security/atmo-ai-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.atmo.ai/
+- type: Blog
+  url: https://www.atmo.ai/news
+- type: TermsOfService
+  url: https://www.atmo.ai/terms
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-09-26'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://www.nasdaqprivatemarket.com/
+    status: 200
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
